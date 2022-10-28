@@ -1,4 +1,5 @@
 import React , { useState , useEffect } from 'react';
+import { Switch ,  Route } from "react-router-dom"
 import CharacterMenu from './components/CharacterMenu';
 import Team from './components/Team';
 import Comments from './components/Comments';
@@ -9,7 +10,6 @@ function App() {
   const [characters, setCharacters] = useState([])
   const [teamChars, setTeamChars] = useState([])
   const [currentChar, setCurrentChar] = useState([])
-  const [teamBuilder, setTeamBuilder] = useState(true)
 
   useEffect(() => {
     fetch("http://localhost:3000/characters")
@@ -24,8 +24,20 @@ function App() {
 
   return (
     <>
-      <NavBar teamBuilder={teamBuilder} setTeamBuilder={setTeamBuilder}/>
-      {teamBuilder?<Team teamChars={teamChars} setTeamChars={setTeamChars}/>:<Comments currentChar={currentChar}/>}
+      <NavBar/>
+
+      <Switch>
+
+        <Route path="/team">
+          <Team teamChars={teamChars} setTeamChars={setTeamChars}/>
+        </Route>
+
+        <Route path="/comments">
+          <Comments currentChar={currentChar}/>
+        </Route>
+
+      </Switch>
+
       <CharacterMenu characters={characters} teamChars={teamChars} setTeamChars={setTeamChars} setCurrentChar={setCurrentChar}/>
 
     </>

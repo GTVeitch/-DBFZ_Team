@@ -1,17 +1,16 @@
 import React from "react"
+import { Link } from "react-router-dom"
 
-function NavBar( { teamBuilder, setTeamBuilder } ) {
-
-    function handleClick(e) {
-        e.preventDefault()
-        setTeamBuilder(!teamBuilder)
-    }
+function NavBar( { } ) {
 
     return(
         <>
             <div id="navBar">
                 <a href='https://www.dustloop.com/w/Dragon_Ball_FighterZ'>Credit to Dustloop</a>
-                <div onClick={handleClick}>Click me -{'>'}{teamBuilder? "    Team Builder": "    Character Commenter"}</div>
+                <br></br>
+                <Link to="/team">Team Builder</Link>
+                <span>     </span>
+                <Link to="/comments">Character Commenter</Link>
             </div>
         </>
     )

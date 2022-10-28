@@ -55,13 +55,19 @@
         {
           "name": "first",
           "content": "first",
-          "votes": 10,
+          "votes": 12,
           "id": 1
         },
         {
           "name": "das",
           "content": "so hard to use",
-          "votes": 7,
+          "votes": 10,
+          "id": 2
+        },
+        {
+          "name": "real pokemon",
+          "content": "so hard to use really",
+          "votes": 0,
           "id": 2
         }
       ]
