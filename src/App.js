@@ -30,15 +30,21 @@ function App() {
 
         <Route path="/team">
           <Team teamChars={teamChars} setTeamChars={setTeamChars}/>
+          <CharacterMenu characters={characters} teamChars={teamChars} setTeamChars={setTeamChars} setCurrentChar={setCurrentChar}/>
         </Route>
 
         <Route path="/comments">
           <Comments currentChar={currentChar}/>
+          <CharacterMenu characters={characters} teamChars={teamChars} setTeamChars={setTeamChars} setCurrentChar={setCurrentChar}/>
+        </Route>
+
+        <Route path="/dustloop">
+          <a href='https://www.dustloop.com/w/Dragon_Ball_FighterZ'>Check this out for more detailed information.</a>
         </Route>
 
       </Switch>
 
-      <CharacterMenu characters={characters} teamChars={teamChars} setTeamChars={setTeamChars} setCurrentChar={setCurrentChar}/>
+
 
     </>
   );

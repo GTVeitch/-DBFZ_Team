@@ -6,7 +6,7 @@ function NavBar( { } ) {
     return(
         <>
             <div id="navBar">
-                <a href='https://www.dustloop.com/w/Dragon_Ball_FighterZ'>Credit to Dustloop</a>
+                <Link to='/dustloop'>Credit to Dustloop</Link>
                 <br></br>
                 <Link to="/team">Team Builder</Link>
                 <span>     </span>
